@@ -13,12 +13,7 @@ class Student
   def junior?
     @grade == 10
   end
-
-  def to_s
-    "#{first_name}, #{last_name}"
-  end
 end
-
 
 =begin
 def seniors(students)
@@ -30,7 +25,6 @@ def seniors(students)
 end
 return senior_students
 end
-=end
 
 def seniors(students)
   students.select {|student| student.senior?}
@@ -58,3 +52,4 @@ all_students = [fred, sarah, jack]
 juniors(all_students).each do |student|
   puts student
 end
+=end
