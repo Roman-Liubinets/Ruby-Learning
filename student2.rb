@@ -7,7 +7,11 @@ class Student
   end
 
   def senior?
-    @grade ==12
+    @grade == 12
+  end
+
+  def junior?
+    @grade == 10
   end
 
   def to_s
@@ -32,7 +36,9 @@ def seniors(students)
   students.select {|student| student.senior?}
 end
 
-
+def juniors(student)
+  student.select {|student| student.junior?}
+end
 
 
 fred = Student.new("Fred", "James", 12)
@@ -45,6 +51,10 @@ all_students = [fred, sarah, jack]
 #  puts student
 #end
 
-seniors(all_students).each do |student|
+#seniors(all_students).each do |student|
+#  puts student
+#end
+
+juniors(all_students).each do |student|
   puts student
 end
