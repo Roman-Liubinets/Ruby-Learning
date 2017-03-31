@@ -1,11 +1,5 @@
-class Student
-  attr_reader :first_name, :last_name, :grade
-  def initialize(first_name, last_name, grade)
-    @first_name = first_name
-    @last_name = last_name
-    @grade = grade
-  end
-
+Student = Struct.new(:first_name, :last_name, :grade) do
+  attr_reader :first_name, :last_name
   def senior?
     @grade == 12
   end
@@ -14,6 +8,9 @@ class Student
     @grade == 10
   end
 end
+
+roman = Student.new("Roman","Liubinets")
+roman.first_name
 
 =begin
 def seniors(students)
